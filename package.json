@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0"
