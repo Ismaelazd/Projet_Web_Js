@@ -1,23 +1,97 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
-body div {
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+body header {
+  position: relative;
+  z-index: 10;
+}
+body header div {
   display: flex;
   justify-content: center;
 }
-body nav {
+body header nav {
   display: flex;
 }
-body nav div:nth-child(3) i {
+body header nav div:nth-child(3) i {
   font-size: 80%;
 }
-body .navbar-light .navbar-nav .nav-link {
+body header .navbar-light .navbar-nav .nav-link {
   font-size: 90%;
+  text-transform: uppercase;
 }
-body #empo {
+body header #empo {
   padding: 55px 0;
 }
-body #empo img {
+body header #empo img {
   width: 80%;
+}
+body .section1 {
+  background-color: #f3f3f3;
+}
+body .section1 .sec1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .section1 .sec1 div #tith3 {
+  font-size: 300%;
+  color: #bd584e;
+}
+body .section1 .sec1 div h1 {
+  font-weight: bold;
+  font-size: 700%;
+}
+body .section1 .sec1 div button {
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 35px;
+  padding: 15px 40px;
+  font-size: 80%;
+  background-color: #bd584e;
+  color: white;
+  font-weight: bold;
+}
+body .section1 .sec1 div .tex {
+  color: #b3b3b3;
+}
+body .section1 .sec1 div img {
+  width: 65%;
+}
+body .section1 .sec1 .sec11 {
+  padding-left: 250px;
+  padding-right: 0;
+}
+body .section2 div {
+  display: flex;
+  justify-content: center;
+}
+body .section2 div div {
+  height: 205px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  margin: 0 10px;
+}
+body .section2 div div a {
+  text-align: center;
+  color: white;
+  border-bottom: solid 1px white;
+  align-items: center;
+  font-size: 170%;
+  font-weight: bold;
+}
+body .section2 div .serv1 {
+  background-image: url("../img/services/service-1.jpg");
+}
+body .section2 div .serv2 {
+  background-image: url("../img/services/service-2.jpg");
+}
+body .section2 div .serv3 {
+  background-image: url("../img/services/slider-3.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
