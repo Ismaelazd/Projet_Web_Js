@@ -1,4 +1,23 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+body div {
+  display: flex;
+  justify-content: center;
+}
+body nav {
+  display: flex;
+}
+body nav div:nth-child(3) i {
+  font-size: 80%;
+}
+body .navbar-light .navbar-nav .nav-link {
+  font-size: 90%;
+}
+body #empo {
+  padding: 55px 0;
+}
+body #empo img {
+  width: 80%;
+}
 
 /*# sourceMappingURL=style.css.map */
