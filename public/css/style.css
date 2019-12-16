@@ -1,7 +1,7 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 body header {
   position: relative;
@@ -169,6 +169,7 @@ body .section6 .row {
 }
 body .section7 {
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 body .section7 .row {
   text-align: center;
@@ -179,9 +180,12 @@ body .section7 .row div {
   background-color: #f3f3f3;
   margin: 10px;
   line-height: 1.7;
-  padding: 70px 60px;
+  padding: 70px 0px;
+  flex: 1;
 }
 body .section7 .row div i {
+  color: #303030;
+  font-size: 250%;
   font-weight: bold;
   padding-bottom: 40px;
 }
@@ -190,13 +194,85 @@ body .section7 .row div p:nth-child(2) {
 }
 body .section7 .row div p:nth-child(3) {
   color: #b6b6b6;
+  padding: 10px 90px;
 }
 body .section7 .row div button {
   border: 0;
-  background-color: black;
+  background-color: #303030;
   color: white;
   text-transform: uppercase;
   padding: 10px 30px;
+}
+body .section8 {
+  background-color: #212121;
+  color: #9b9b9b;
+  padding: 15px 120px;
+}
+body .section8 .row {
+  margin: 0 100px;
+  padding: 50px 0;
+}
+body .section8 .row div {
+  padding: 0px 30px;
+  flex: 1;
+}
+body .section8 .row div h2 {
+  font-size: 90%;
+  color: white;
+  text-transform: uppercase;
+  text-transform: bold;
+}
+body .section8 .row div p {
+  font-size: 80%;
+}
+body .section8 .row #milieu {
+  border-left: 1px solid #353535;
+  border-right: 1px solid #353535;
+}
+body .section8 .row #milieu ul {
+  padding: 0;
+}
+body .section8 .row #milieu ul li {
+  list-style: none;
+  border-bottom: 1px solid #353535;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+body .section8 .row #milieu ul li a {
+  font-size: 80%;
+  color: #9b9b9b;
+  text-decoration: none;
+}
+body .section8 .row #milieu ul li a:hover {
+  color: white;
+  transition: ease 1s;
+}
+body .section8 .row #milieu ul li::before {
+  content: ">";
+  padding-right: 10px;
+}
+body .section8 .row #tag a {
+  font-size: 55%;
+  text-transform: uppercase;
+  color: #9b9b9b;
+  text-decoration: none;
+  border: 1px solid #353535;
+  padding: 8px 16px;
+  margin: 0 10px 10px 0;
+}
+body .section8 .row #tag a:hover {
+  color: white;
+  border: 1px solid white;
+  transition: ease 1s;
+}
+body footer {
+  text-align: center;
+}
+body footer p {
+  padding: 35px 0;
+  color: 838383;
+  background-color: #0a0a0a;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

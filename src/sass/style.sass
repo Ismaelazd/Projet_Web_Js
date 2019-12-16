@@ -2,7 +2,7 @@
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
 
 body 
-    font-family: 'Source Sans Pro', sans-serif
+    font-family: 'Poppins', sans-serif
     header   
         position: relative
      
@@ -188,6 +188,7 @@ body
 
     .section7 
         margin-top: 120px
+        margin-bottom: 120px
 
         .row
             text-align: center
@@ -198,9 +199,12 @@ body
                 background-color: rgb(243, 243, 243)
                 margin: 10px
                 line-height: 1.7
-                padding: 70px 60px
+                padding: 70px 0px
+                flex: 1
                 
                 i 
+                    color: #303030
+                    font-size: 250%
                     font-weight: bold
                     padding-bottom: 40px
 
@@ -209,17 +213,89 @@ body
 
                 p:nth-child(3)
                     color: #b6b6b6
+                    padding: 10px 90px
 
                 button 
                     border: 0
-                    background-color: black
+                    background-color: #303030
                     color: white
                     text-transform: uppercase 
                     padding: 10px 30px
 
-                   
+    .section8 
+        background-color: #212121
+        color: #9b9b9b
+        padding: 15px 120px
+        
+        
+        .row 
+            margin: 0 100px
+            padding: 50px 0
+            div 
+                padding: 0px 30px
+                flex: 1
+                h2 
+                    
+                    font-size: 90%
+                    color: white
+                    text-transform: uppercase 
+                    text-transform: bold
+                p 
+                    font-size: 80%
 
+            #milieu 
+                border-left: 1px solid #353535    
+                border-right: 1px solid #353535 
+              
+                
+                
+                ul
+                    padding: 0
+                    li
+                        list-style: none
+                        border-bottom:  1px solid #353535 
+                        padding-bottom: 5px
+                        margin-bottom: 10px
 
+                        a 
+                            font-size: 80%
+                            color: #9b9b9b
+                            text-decoration: none
+
+                        a:hover 
+                            color: white
+                            transition: ease 1s
+                    li::before 
+                        content: ">"
+                        padding-right: 10px
+
+            #tag
+                
+                h2 
+                a
+                    font-size: 55%
+                    text-transform: uppercase 
+                    color: #9b9b9b
+                    text-decoration: none
+                    border: 1px solid #353535 
+                    padding: 8px 16px
+                    margin: 0 10px 10px 0
+                    
+
+                a:hover
+                  
+                    color: white
+                    border: 1px solid white
+                    transition: ease 1s
+                
+
+    footer         
+        text-align: center       
+        p 
+            padding: 35px 0
+            color: 838383
+            background-color: #0a0a0a
+            margin: 0
             
   
 
