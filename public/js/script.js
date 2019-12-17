@@ -1,13 +1,21 @@
 
+// Black Mode
+
 let darkMode = document.querySelectorAll('.blackMode');
+let body = document.querySelector('body')
 
+function blackMode(){
 
-(function blackMode(){
-
-    darkMode.forEach(element => {
-        console.log(element);
+    darkMode.forEach(button => {
+        button.addEventListener('click',()=>{
+            body.style.backgroundColor = getComputedStyle(button).backgroundColor
+        })
         
     });
 
-})()
+}
+
+blackMode();
+
+
 
