@@ -134,6 +134,8 @@ class Carousel {
     let children = [].slice.call(element.children);
     this.isMobile = false
     this.currentItem = 0
+    this.moveCallbacks = []
+    this.offset = 0
 
     // modification du DOM
     this.root = this.createDivWithClass('carousel')
@@ -141,26 +143,23 @@ class Carousel {
     //this.root.setAttribute('tabindex', '0')
     this.root.appendChild(this.container)
     this.element.appendChild(this.root)
-    this.moveCallbacks = []
     this.items = children.map((child) => {
-      console.log(child);
 
       let item = this.createDivWithClass('carousel__item')
       item.appendChild(child)
 
       return item
     })
-    this.setStyle()
-    this.createNavigation()
+
 
     if (this.options.infinite) {
-      let offset = this.options.slidesVisible * 2 - 1
+      this.offset = this.options.slidesVisible + this.options.slidesToScroll - 1
       this.items = [
-        ...this.items.slice(this.items.length - offset).map(elem => elem.cloneNode(true)),
+        ...this.items.slice(this.items.length - this.offset).map(elem => elem.cloneNode(true)),
         ...this.items,
-        ...this.items.slice(0, offset).map(elem => elem.cloneNode(true)),
+        ...this.items.slice(0, this.offset).map(elem => elem.cloneNode(true)),
       ]
-      this.currentItem = offset
+      this.goToItem(this.offset,false)
       console.log(this.items);
 
     }
@@ -176,16 +175,21 @@ class Carousel {
     }
 
     // Evenements
-    this.moveCallbacks.forEach(cb => cb(0))
+    this.moveCallbacks.forEach(cb => cb(this.currentItem))
     this.onWindowResize()
     window.addEventListener('resize', this.onWindowResize.bind(this))
-    this.root.addEventListener('keyup', e => {
-      if (e.key === ' ArrowRight') {
-        this.next()
-      } else if (e.key === ' ArrowLeft') {
-        this.prev()
-      }
-    })
+    // this.root.addEventListener('keyup', e => {
+    //   if (e.key === ' ArrowRight') {
+    //     this.next()
+    //   } else if (e.key === ' ArrowLeft') {
+    //     this.prev()
+    //   }
+    // })
+
+    if(this.options.infinite){
+      this.container.addEventListener('transitionend',this.resetInfinite.bind(this))
+
+    }
   }
 
   createDivWithClass(className) {
@@ -240,7 +244,7 @@ class Carousel {
 
   }
 
-  goToItem(index) {
+  goToItem(index, animation = true) {
     if (index < 0) {
       if (this.options.loop) {
         index = this.items.length - this.slidesVisible
@@ -258,9 +262,28 @@ class Carousel {
       }
     }
     let translateX = index * (-100 / this.items.length)
+    if(animation === false){
+      this.container.style.transition = 'none'
+    }
     this.container.style.transform = 'translate3d(' + translateX + '%,0,0)'
+    this.container.offsetHeight
+    if(animation === false){
+      this.container.style.transition = ''
+    }
     this.currentItem = index
     this.moveCallbacks.forEach(cb => cb(index))
+
+
+  }
+  // Deplace le conatiner pour donner l impression d'un slide infini
+  resetInfinite(){
+  
+    
+    if(this.currentItem <= this.options.slidesToScroll){
+      this.goToItem(this.currentItem+(this.items.length-2*this.offset),false)
+    }else if(this.currentItem >= this.items.length - this.offset){
+      this.goToItem(this.currentItem-(this.items.length-2*this.offset))
+    }
   }
 
   onMove(cb) {
@@ -282,15 +305,16 @@ class Carousel {
     let pagination = this.createDivWithClass('carousel__pagination')
     let buttons = []
     this.root.appendChild(pagination)
-    for (let i = 0; i < this.items.length; i = i + this.options.slidesToScroll) {
+    for (let i = 0; i < this.items.length-(this.offset) ; i = i + this.options.slidesToScroll) {
 
       let button = this.createDivWithClass('carousel__pagination__button')
-      button.addEventListener('click', () => this.goToItem(i))
+      button.addEventListener('click', () => this.goToItem(i+this.offset))
       pagination.appendChild(button)
       buttons.push(button)
     }
     this.onMove(index => {
-      let activeBtn = buttons[Math.floor(index / this.options.slidesToScroll)]
+      let count = this.items.length - (2*this.offset)
+      let activeBtn = buttons[Math.floor(((index - this.offset)%count)/ this.options.slidesToScroll)]
       if (activeBtn) {
         buttons.forEach(btn => btn.classList.remove('carousel__pagination__button--active'))
         activeBtn.classList.add('active')
@@ -312,7 +336,6 @@ let onReady = function () {
   new Carousel(document.querySelector('#carousel1'), {
     slidesVisible: 4,
     slidesToScroll: 1,
-    loop: false,
     pagination: true,
     infinite: true
   })
