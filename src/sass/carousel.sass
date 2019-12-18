@@ -1,0 +1,98 @@
+
+.carousel
+    position: relative
+
+
+.carousel__panorama::after
+    content: ""
+    clear: both 
+    display: table
+
+
+.item
+    position: relative
+    margin: 40px 10px
+    background-color: white 
+    box-shadow: 0 15px 35px #3232321a, 05px 15px #0000001a
+    transition: transform .3s 
+    transform: translate3d(0,-1px,0) 
+
+
+.items
+    position: relative
+
+.carousel__item
+    display: inline-block
+
+ 
+.item 
+    img
+        display: block 
+        width: 100% 
+        height: auto
+        
+
+.item:hover
+    transform: translate3d(0, -10px,0)
+
+.carousel__container
+    transition: transform .3s
+
+.carousel__next,.carousel__prev
+    position: absolute
+    width: 40px
+    height: 40px
+    background-image: url('../img/greater2.jpg')
+    background-size: cover
+    background-color: #dfdfdf
+    border-radius: 50%
+    top: 50%
+    margin-top: -20px
+    right: 0px
+    box-shadow: 0 15px 35px #3232321a, 05px 15px #0000001a
+    cursor: pointer
+    transition: transform .3s, opacity 3.s
+
+.carousel__next:hover,.carousel__prev:hover
+    transform: scale(1.2)
+
+.carousel__prev:hover
+    transform: rotate(180deg)
+    transform: scale(1.2)
+
+
+.carousel__prev 
+    background-image: url('../img/greater2.jpg')
+    background-color: #dfdfdf
+    right: auto
+    left: 20px
+    transform: rotate(180deg)
+
+.carousel__next--hidden,.carousel__prev--hidden
+    opacity: 0
+    
+.carousel__pagination 
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    text-align: center
+   
+
+.carousel__pagination__button 
+    background-color: #b6b6b6
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    display: inline-block
+    margin: 0 3px
+    box-shadow: 0 2px 5px #3232321a
+    transition: transform .3s
+    cursor: pointer
+
+
+.carousel__pagination__button:hover
+    transform: scale(1.4)
+
+.carousel__pagination__button--active
+    transform: scale(1.4)

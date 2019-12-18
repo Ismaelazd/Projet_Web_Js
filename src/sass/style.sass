@@ -1,6 +1,8 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
 @import './variables'
+@import './carousel'
+@import './modal'
 
 body 
     font-family: 'Poppins', sans-serif
@@ -355,77 +357,4 @@ body
             background-color: $dark
             margin: 0
             
-  
-
-    .form 
-        padding: 10%
-        background-image: url('../img/bg-form.jpg')
-        background-size: cover
-        background-position: center
-
-        
-        .formbg 
-            background-color: transparent
-            height: 300%
-            margin:  0 10%
-            border: $dark 1px solid
-            padding: 20px
-            border-radius: 15px
-
-            h2 
-                color: #b3b3b3
-
-            #sign 
-                padding-right: 25px
-                flex: 1
-                border-right: $dark 1px solid
-
-                input 
-                    width: 100%
-                    padding-left: 10px
-                    margin-bottom: 5px
-                    border: 0
-                    border-bottom: $dark 1px solid
-                    background-color: transparent 
-
-            #connex 
-                flex: 1
-                padding-left: 25px
-
-                input 
-                    width: 100%
-                    padding-left: 10px
-                    margin-bottom: 5px
-                    border: 0
-                    border-bottom: $dark 1px solid
-                    background-color: transparent
-
-            button
-                border: 0
-                background-color: $dark
-                color: white
-                margin-top: 15px
-                border-radius: 10px
-                padding: 5px 10px
-                
-            button:hover
-                background-color: white
-                color: $dark
-
-            *:focus
-                outline: none
-
-            button:active
-                background-color: $gris
-
-            ::placeholder 
-                color: $gris
-
-        .formbg:hover
-            box-shadow: 0 20px 50px 10px rgba(0, 0, 0, 0.5)
-            transition: ease .6s
-            background-color: #02020231
-            //transform: scale(1.2)
-            transform: translate3d(0,-10px,0)
-            
-            
+    
