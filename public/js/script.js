@@ -1,3 +1,38 @@
+// Scroll navbar
+
+
+window.onscroll = function() {scrollFunction()};
+function createImg(){
+  var x = document.createElement("IMG");
+  x.setAttribute("src", "../../public/img/logo.png");
+  x.setAttribute("width", "66%");
+  x.style.filter = "drop-shadow(1px 1px 5px white)  drop-shadow(-1px -1px 0 white)"
+  return x
+}
+let getImg  = false
+let image = createImg()
+function scrollFunction() {
+  if (document.body.scrollTop > 160 || document.documentElement.scrollTop > 160) {
+    document.querySelector("nav").style.padding = "15px 16px";
+    
+    document.querySelector(".imgPlace").appendChild(image);
+    document.querySelector("nav").classList.add('fixed-top')
+    getImg = true
+ 
+  } else {
+    document.querySelector("nav").style.padding = "8px 16px";
+    document.querySelector("nav").classList.remove('fixed-top')
+    document.querySelector("nav").style.transition = 'ease 0.8s'
+    if(getImg){
+
+      document.querySelector(".imgPlace").removeChild(image);
+    }
+    getImg = false
+
+  }
+}
+
+
 
 // Active class
  let panel =document.querySelectorAll('.panel')
@@ -24,9 +59,7 @@ let icon = document.querySelectorAll('i')
 let liens = document.querySelectorAll('li a')
 let linkImg = document.querySelectorAll('.shop-item')
 let footer = document.querySelector('footer p')
-
 let img = document.querySelector('#img-empo')
-
 
 
 function blackMode() {

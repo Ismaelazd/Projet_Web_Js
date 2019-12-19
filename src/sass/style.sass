@@ -9,24 +9,29 @@
 body 
     font-family: 'Poppins', sans-serif
     background-color: $bg
-    transition: ease .8s
+   
 
     header   
         position: relative
-     
         z-index: 10
         div         
             display: flex
             justify-content: center
 
-          
-                 
             
 
         nav         
             display: flex
+            overflow: hidden
+            background-color: white
+            padding: 90px 10px
+            transition: ease 0.8s
+            position: fixed
+            width: 100%
+            top: 0
+            z-index: 99
         
-            div:nth-child(3)
+            div:nth-child(4)
                 i 
                     align-self: center
                     cursor: pointer
@@ -190,7 +195,9 @@ body
                         .hide 
                             opacity: 1 
                             a 
-                                padding: 15px 0     
+                                padding: 15px 0   
+                                color: white 
+                                 
                     .hide 
                         position: absolute
                         bottom: 110px
@@ -285,9 +292,6 @@ body
 
 
 
-        
-       
-                     
 
     .section7 
         margin-top: 120px

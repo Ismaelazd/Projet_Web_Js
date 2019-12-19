@@ -1,7 +1,13 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
-.--active {
+.active2 {
   background-color: #bd584e;
+  color: white;
+}
+
+.btn-active {
+  background-color: white;
+  color: #1a1a1a;
 }
 
 .carousel {
@@ -259,7 +265,6 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
-  transition: ease 0.8s;
 }
 body header {
   position: relative;
@@ -271,31 +276,39 @@ body header div {
 }
 body header nav {
   display: flex;
+  overflow: hidden;
+  background-color: white;
+  padding: 90px 10px;
+  transition: ease 0.8s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
 }
-body header nav div:nth-child(3) i {
+body header nav div:nth-child(4) i {
   align-self: center;
   cursor: pointer;
 }
-body header nav div:nth-child(3) i:active {
+body header nav div:nth-child(4) i:active {
   color: #0000005d;
 }
-body header nav div:nth-child(3) button {
+body header nav div:nth-child(4) button {
   border: 0;
   margin-right: 5px;
 }
-body header nav div:nth-child(3) button:nth-child(1) {
+body header nav div:nth-child(4) button:nth-child(1) {
   background-color: #1a1a1a;
   border: 1px solid white;
   height: 25px;
   width: 25px;
 }
-body header nav div:nth-child(3) button:nth-child(2) {
+body header nav div:nth-child(4) button:nth-child(2) {
   background-color: white;
   border: 1px solid #1a1a1a;
   height: 25px;
   width: 25px;
 }
-body header nav div:nth-child(3) button:nth-child(3) {
+body header nav div:nth-child(4) button:nth-child(3) {
   background-color: #1a1a1a;
   border: 1px solid white;
   color: white;
@@ -304,10 +317,10 @@ body header nav div:nth-child(3) button:nth-child(3) {
   padding: 5px 10px;
   text-transform: bold;
 }
-body header nav div:nth-child(3) button:focus {
+body header nav div:nth-child(4) button:focus {
   outline: none;
 }
-body header nav div:nth-child(3) button:active {
+body header nav div:nth-child(4) button:active {
   background-color: #0000005d;
 }
 body header .navbar-light .navbar-nav .nav-link {
@@ -426,6 +439,7 @@ body .section3 .row div .zoom:hover .hide {
 }
 body .section3 .row div .zoom:hover .hide a {
   padding: 15px 0;
+  color: white;
 }
 body .section3 .row div .zoom .hide {
   position: absolute;
