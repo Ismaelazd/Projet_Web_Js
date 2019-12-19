@@ -1,5 +1,9 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+.--active {
+  background-color: #bd584e;
+}
+
 .carousel {
   position: relative;
 }
@@ -54,7 +58,7 @@
   right: 0px;
   box-shadow: 0 15px 35px #3232321a, 5px 15px #0000001a;
   cursor: pointer;
-  transform: transition 0.3s;
+  transition: transform 0.3s;
 }
 
 .carousel__next:hover, .carousel__prev:hover {
@@ -72,6 +76,10 @@
   right: auto;
   left: 20px;
   transform: rotate(180deg);
+}
+
+.carousel__next--hidden, .carousel__prev--hidden {
+  opacity: 0;
 }
 
 .carousel__pagination {
@@ -250,6 +258,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #ffffff;
+  transition: ease 0.8s;
 }
 body header {
   position: relative;
@@ -275,17 +285,19 @@ body header nav div:nth-child(3) button {
 }
 body header nav div:nth-child(3) button:nth-child(1) {
   background-color: #1a1a1a;
+  border: 1px solid white;
   height: 25px;
   width: 25px;
 }
 body header nav div:nth-child(3) button:nth-child(2) {
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #1a1a1a;
   height: 25px;
   width: 25px;
 }
 body header nav div:nth-child(3) button:nth-child(3) {
   background-color: #1a1a1a;
+  border: 1px solid white;
   color: white;
   border-radius: 10px;
   font-size: 80%;
@@ -398,6 +410,42 @@ body .section3 h3 {
   padding-bottom: 50px;
   text-align: center;
   font-weight: bold;
+}
+body .section3 .row div .zoom {
+  overflow: hidden;
+}
+body .section3 .row div .zoom img {
+  width: 100%;
+  transition: ease 1s;
+}
+body .section3 .row div .zoom:hover img {
+  transform: scale(1.2);
+}
+body .section3 .row div .zoom:hover .hide {
+  opacity: 1;
+}
+body .section3 .row div .zoom:hover .hide a {
+  padding: 15px 0;
+}
+body .section3 .row div .zoom .hide {
+  position: absolute;
+  bottom: 110px;
+  z-index: 3;
+  /* text-align: center; */
+  opacity: 0;
+  transition: bottom ease 1s;
+}
+body .section3 .row div .zoom .hide a {
+  opacity: 0.7;
+  transition: ease 0.5s;
+  padding: 19px 10px 0;
+  color: white;
+}
+body .section3 .row div .zoom .hide .view {
+  background-color: #1a1a1a;
+}
+body .section3 .row div .zoom .hide .addTo {
+  background-color: #bd584e;
 }
 body .section3 .row div div .onsale {
   background-color: #bd584e;

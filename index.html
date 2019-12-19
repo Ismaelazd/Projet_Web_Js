@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@
 <body>
     <header>
         <div id="empo">
-            <a class="navbar-brand" href="#"><img src="./public/img/logo.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img id="img-empo" src="./public/img/logo.png" alt=""></a>
 
         </div>
         <nav class="navbar navbar-expand-lg navbar-light ">
@@ -25,10 +25,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active mr-4">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link " href="index.html">Home</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link" href="#">Product</a>
+                        <a class="nav-link " href="#">Product</a>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link" href="#">Blog</a>
@@ -93,29 +93,52 @@
             <h3>Recent products</h3>
             <div class="row ">
                 <div class="col-4">
-                    <img class="img-fluid " src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                   
+                        <div class="zoom ">
+                            <img class="img-fluid " src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+    
+                            <div class="row hide container">
+                                <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                                <a class="addTo col text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                            </div>
+                        </div>
+                   
                     <div class="text-center my-4">
-                        <a href="">Luxuary Sofa</a>
+                        <a class="shop-item" href="">Luxuary Sofa</a>
                         <p>$450.00<span class="text-secondary"> - </span>$500.00</p>
                     </div>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="./public/img/products_mini/product-gloves.jpg" alt="">
+                    <div class="zoom">
+                        <img class="img-fluid" src="./public/img/products_mini/product-gloves.jpg" alt="">
+                        <div class="row hide container">
+                            <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                            <a class="addTo col text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                        </div>
+                        
+                    </div>
                     <div class="d-flex justify-content-center my-4">
                         <div>
                             <span class="onsale">Sale!</span>
                         </div>
                         <div>
-                            <a href="">Leather Gloves</a>
+                            <a class="shop-item" href="">Leather Gloves</a>
                             <p><del>$34.00 </del>
                                 <span> $27.00 </span></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="./public/img/products_mini/product-cups.jpg" alt="">
+                    <div class="zoom">
+
+                        <img class="img-fluid" src="./public/img/products_mini/product-cups.jpg" alt="">
+                        <div class="row hide container">
+                            <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                            <a class="addTo col text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                        </div>
+                    </div>
                     <div class="text-center my-4">
-                        <a href="">Colorful Bowl</a>
+                        <a class="shop-item" href="">Colorful Bowl</a>
                         <p>$18.00</p>
                     </div>
                 </div>
@@ -124,13 +147,20 @@
 
             <div class="row ">
                 <div class="col-4">
-                    <img class="img-fluid " src="./public/img/products_mini/product-bag.jpg" alt="">
+                    <div class="zoom">
+
+                        <img class="img-fluid " src="./public/img/products_mini/product-bag.jpg" alt="">
+                        <div class="row hide container">
+                            <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                            <a class="addTo col text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                        </div>
+                    </div>
                     <div class="d-flex justify-content-center my-4">
                         <div>
                             <span class="onsale">Sale!</span>
                         </div>
                         <div>
-                            <a href="">Woman Bag</a>
+                            <a class="shop-item" href="">Woman Bag</a>
                             <p><del>$420.00 </del>
                                 <span> $350.00 </span></p>
                         </div>
@@ -138,41 +168,82 @@
 
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="./public/img/products_mini/product-tshitr.jpg" alt="">
+                    <div class="zoom">
+
+                        <img class="img-fluid" src="./public/img/products_mini/product-tshitr.jpg" alt="">
+                        <div class="row hide container">
+                            <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                            <a class="addTo col text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                        </div>
+                    </div>
                     <div class="text-center my-4">
-                        <a href="">Minimal T-Shirt</a>
+                        <a class="shop-item" href="">Minimal T-Shirt</a>
                         <p>$15.00</p>
                     </div>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="./public/img/products_mini/product-plates.jpg" alt="">
+                    <div class="zoom">
+
+                        <img class="img-fluid" src="./public/img/products_mini/product-plates.jpg" alt="">
+                        <div class="row hide container">
+                            <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                            <a class="addTo col-6 text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                        </div>
+                    </div>
                     <div class="text-center my-4">
-                        <a href="">Plates Set</a>
+                        <a class="shop-item" href="">Plates Set</a>
                         <p>$30.00</p>
                     </div>
                 </div>
+                
             </div>
 
 
+            
             <div class="row ">
                 <div class="col-4">
-                    <img class="img-fluid " src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                   
+                        <div class="zoom ">
+                            <img class="img-fluid " src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
+    
+                            <div class="row hide container">
+                                <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                                <a class="addTo col text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                            </div>
+                        </div>
+                 
                     <div class="text-center my-4">
-                        <a href="">Modern Sofa</a>
+                        <a class="shop-item" href="">Modern Sofa</a>
                         <p>$900.00</p>
                     </div>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="./public/img/products_mini/product-bed.jpg" alt="">
-                    <div class="text-center my-4">
-                        <a href="">Bed Linen</a>
-                        <p>$79.00</p>
+                    <div class="zoom">
+                        <img class="img-fluid" src="./public/img/products_mini/product-bed.jpg" alt="">
+                        <div class="row hide container">
+                            <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                            <a class="addTo col text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                        </div>
+                        
+                    </div>
+                    <div class="d-flex justify-content-center my-4">
+                        <div class="text-center ">
+                            <a class="shop-item" href="">Bed Linen</a>
+                            <p>$79.00</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="./public/img/products_mini/product-shoes.jpg" alt="">
+                    <div class="zoom">
+
+                        <img class="img-fluid" src="./public/img/products_mini/product-shoes.jpg" alt="">
+                        <div class="row hide container">
+                            <a class="view col-6 text-center" href=""> <i class="fa fa-eye pr-2"></i>View details</a>
+                            <a class="addTo col text-center" href=""><i class="fas fa-shopping-cart pr-2 "></i>Add to cart</a>
+                        </div>
+                    </div>
                     <div class="text-center my-4">
-                        <a href="">Minimal Shoes</a>
+                        <a class="shop-item" href="">Minimal Shoes</a>
                         <p>$60.00</p>
                     </div>
                 </div>
@@ -192,7 +263,6 @@
         <section class="section6">
 
             <h3 class="mt-5">Hot Fashion products</h3>
-
 
 
             <div id="carousel1">
@@ -237,7 +307,7 @@
 
         <section class="section7">
             <div class="row mx-3">
-                <div class="">
+                <div class="panel">
                     <i class="far fa-check-circle"></i>
                     <p>Trusted by 10,000+customers</p>
                     <p>farfar away, behind the word mountains, fra from the countries Vokalia and Constantina , there
@@ -245,15 +315,15 @@
                         the blind texts.</p>
                     <button class="rounded">Learn More</button>
                 </div>
-                <div class="">
-                    <i class="far fa-check-circle"></i>
+                <div class="panel">
+                    <i class="fas fa-paper-plane"></i>
                     <p>Trusted by 10,000+customers</p>
                     <p>farfar away, behind the word mountains, fra from the countries Vokalia and Constantina , there
                         live
                         the blind texts.</p>
                     <button class="rounded">Learn More</button>
                 </div>
-                <div class="">
+                <div class="panel">
                     <i class="far fa-check-circle"></i>
                     <p>Trusted by 10,000+customers</p>
                     <p>farfar away, behind the word mountains, fra from the countries Vokalia and Constantina , there

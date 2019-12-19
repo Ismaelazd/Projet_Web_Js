@@ -1,23 +1,101 @@
-// Black Mode
 
+// Active class
+ let panel =document.querySelectorAll('.panel')
+  
+  
+ panel.forEach( elem =>{
+  console.log(elem.children);
+   
+   elem.addEventListener('click',()=>{
+     
+      elem.classList.toggle('active')
+      elem.classList.toggle('btn-active')
+   })
+ })
+
+
+
+// Black Mode
+let h3 = document.querySelectorAll('h3')
 let darkMode = document.querySelectorAll('.blackMode');
 let body = document.querySelector('body')
 let nav = document.querySelector('.navbar')
+let icon = document.querySelectorAll('i')
+let liens = document.querySelectorAll('li a')
+let linkImg = document.querySelectorAll('.shop-item')
+let footer = document.querySelector('footer p')
+
+let img = document.querySelector('#img-empo')
+
+
 
 function blackMode() {
 
   darkMode.forEach(button => {
     button.addEventListener('click', () => {
+      body.style.transition =' ease .8s'
       body.style.backgroundColor = getComputedStyle(button).backgroundColor
-      nav.style.backgroundColor = 'white'
+      nav.style.transition =' ease .8s'
+      nav.style.backgroundColor = getComputedStyle(button).backgroundColor
     })
 
   });
 
+  // Black Button
+  darkMode[0].addEventListener('click',() =>{
+    icon.forEach(i => {
+      i.style.color = 'white'
+      i.style.transition =' ease .8s'
+    });
+
+    liens.forEach(a =>{
+      a.classList.add('text-white')
+    })
+
+    h3.forEach(a =>{
+      a.classList.add('text-white')
+    })
+    linkImg.forEach(a =>{
+      a.classList.add('text-white')
+    })
+
+    footer.classList.add('bg-light')
+
+    img.style.filter = "drop-shadow(1px 1px 5px white)  drop-shadow(-1px -1px 0 white)"
+  
+  })
+
+  // White button
+  darkMode[1].addEventListener('click',() =>{
+    icon.forEach(element => {
+      let btn = darkMode[0]
+      element.style.color = getComputedStyle(btn).backgroundColor
+    });
+
+    liens.forEach(a =>{
+      a.classList.remove('text-white')
+      a.style.transition =' ease .8s'
+    })
+
+    h3.forEach(a =>{
+      a.classList.remove('text-white')
+      a.style.transition =' ease .8s'
+    })
+   
+    linkImg.forEach(a =>{
+      a.classList.remove('text-white')
+      a.style.transition =' ease .8s'
+    })
+
+    footer.classList.remove('bg-light')
+    footer.style.transition =' ease .8s'
+
+  
+  })
+
 }
 
 blackMode();
-
 
 
 /*********************
@@ -266,8 +344,8 @@ class Carousel {
       this.container.style.transition = 'none'
     }
     this.container.style.transform = 'translate3d(' + translateX + '%,0,0)'
-    this.container.offsetHeight
-    if(animation === false){
+   
+    if(animation === true){
       this.container.style.transition = ''
     }
     this.currentItem = index
