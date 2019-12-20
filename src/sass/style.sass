@@ -3,23 +3,23 @@
 @import './variables'
 @import './carousel'
 @import './modal'
-
+@import './dropdown'
 
 
 body 
     font-family: 'Poppins', sans-serif
     background-color: $bg
+    outline: none 
    
 
     header   
         position: relative
-        z-index: 10
+        z-index: 7
         div         
             display: flex
             justify-content: center
 
             
-
         nav         
             display: flex
             overflow: hidden
@@ -29,7 +29,8 @@ body
             position: fixed
             width: 100%
             top: 0
-            z-index: 99
+            z-index: 5
+          
         
             div:nth-child(4)
                 i 
@@ -120,7 +121,7 @@ body
                 button:hover::after
                     content: ">"
                     padding-left: 13px
-                    transition: ease .1s
+                    transition: ease .5s
                     font-weight: bold
 
                 button:focus

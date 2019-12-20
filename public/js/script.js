@@ -1,3 +1,5 @@
+
+
 // Scroll navbar
 
 
@@ -32,8 +34,6 @@ function scrollFunction() {
   }
 }
 
-
-
 // Active class
  let panel =document.querySelectorAll('.panel')
   
@@ -55,7 +55,7 @@ let h3 = document.querySelectorAll('h3')
 let darkMode = document.querySelectorAll('.blackMode');
 let body = document.querySelector('body')
 let nav = document.querySelector('.navbar')
-let icon = document.querySelectorAll('i')
+let icon = document.querySelectorAll('nav i')
 let liens = document.querySelectorAll('li a')
 let linkImg = document.querySelectorAll('.shop-item')
 let footer = document.querySelector('footer p')

@@ -262,13 +262,36 @@
   cursor: pointer;
 }
 
+#prod {
+  overflow: hidden;
+}
+#prod ul {
+  list-style: none;
+  background-color: blue;
+  padding: 5px 5px;
+  z-index: 10;
+  position: absolute;
+}
+#prod ul li a {
+  text-decoration: none;
+  color: white;
+}
+#prod ul li a:hover {
+  background-color: #9b9b9b;
+}
+
+#prod:hover ul {
+  display: inline;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ffffff;
+  outline: none;
 }
 body header {
   position: relative;
-  z-index: 10;
+  z-index: 7;
 }
 body header div {
   display: flex;
@@ -283,7 +306,7 @@ body header nav {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99;
+  z-index: 5;
 }
 body header nav div:nth-child(4) i {
   align-self: center;
@@ -369,7 +392,7 @@ body .section1 .sec1 div button::after {
 body .section1 .sec1 div button:hover::after {
   content: ">";
   padding-left: 13px;
-  transition: ease 0.1s;
+  transition: ease 0.5s;
   font-weight: bold;
 }
 body .section1 .sec1 div button:focus {
