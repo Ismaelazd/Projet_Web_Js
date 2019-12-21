@@ -1,4 +1,30 @@
+// Panel active
 
+let panels = document.querySelectorAll('.panel')
+
+panels.forEach( e => {
+  e.addEventListener('click',()=>{
+
+    if(e == panels[0]){
+      e.classList.remove('panel')
+      e.classList.add('panel-selection')
+      panels[1].classList.add('panel')
+      panels[2].classList.add('panel')
+    }else if(e == panels[1]){
+      e.classList.remove('panel')
+      e.classList.add('panel-selection')
+      panels[0].classList.add('panel')
+      panels[2].classList.add('panel')
+    }else{
+      e.classList.remove('panel')
+      e.classList.add('panel-selection')
+      panels[0].classList.add('panel')
+      panels[1].classList.add('panel')
+    }
+    
+    
+  })
+})
 
 // Scroll navbar
 
@@ -11,6 +37,7 @@ function createImg(){
   x.style.filter = "drop-shadow(1px 1px 5px white)  drop-shadow(-1px -1px 0 white)"
   return x
 }
+
 let getImg  = false
 let image = createImg()
 function scrollFunction() {
@@ -416,7 +443,7 @@ class Carousel {
     let pagination = this.createDivWithClass('carousel__pagination')
     let buttons = []
     this.root.appendChild(pagination)
-    for (let i = 0; i < this.items.length-(this.offset) ; i = i + this.options.slidesToScroll) {
+    for (let i = 0; i < 6; i = i + this.options.slidesToScroll) {
 
       let button = this.createDivWithClass('carousel__pagination__button')
       button.addEventListener('click', () => this.goToItem(i+this.offset))

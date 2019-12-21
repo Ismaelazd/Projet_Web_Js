@@ -12,3 +12,106 @@ $red: rgb(189, 88, 78)
 .btn-active 
     background-color: white 
     color: $dark
+
+.panel-selection 
+    background-color: $red
+    margin: 10px
+    line-height: 1.7
+    padding: 70px 0px
+    flex: 1
+
+    i 
+        color: #e4e4e4
+        font-size: 250%
+        font-weight: bold
+        padding-bottom: 40px
+
+    p:nth-child(2) 
+        font-weight: bold
+
+    p:nth-child(3)
+        color: #b6b6b6
+        padding: 10px 90px
+
+    button 
+        border: 0
+        background-color: #e7e7e7
+        color: $dark
+        text-transform: uppercase 
+        padding: 10px 30px
+    button:focus
+        outline: none
+
+
+
+.item
+    .item__image
+        overflow: hidden
+        display: flex
+        justify-content: center
+        img
+
+            transition: ease 1s
+        &:hover
+            img
+                transform: scale(1.2)
+            .hide 
+                opacity: 1 
+                margin: 0
+                a 
+                    padding: 15px 0   
+                    color: white 
+
+        .hide 
+            position: absolute
+            bottom: 110px
+            z-index: 3
+            /* text-align: center; */
+            opacity: 0
+            transition: bottom ease 1s
+            width: 100%
+
+
+            a 
+                opacity: .7
+                transition: ease .5s
+                padding: 19px 10px 0
+                color: white
+
+        .view 
+                background-color: $dark
+
+
+        .addTo
+                background-color: $red
+
+    div 
+       
+
+        .onsale
+            background-color: $red
+            color: white
+            font-size: 13px
+            font-weight: 600
+            line-height: 48px
+            width: 48px
+            padding: 0px 0 0px 8px
+            height: 48px
+            border-radius: 100%
+            display: inline-block 
+            margin-right: 20px
+
+
+        a 
+            text-decoration: none
+            color: black 
+            font-weight: bold 
+        del 
+            color: #b6b6b6
+            padding-right: 5px
+            font-weight: bold
+
+        p 
+            color:  $red
+            font-weight: bold
+
