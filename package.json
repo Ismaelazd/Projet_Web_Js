@@ -12,7 +12,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "darkmode-js": "^1.5.3",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0"
